@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasha Sloan | Music</title>
+    <link rel="stylesheet" href="css/MusicCSS.css">
+    <link rel="icon" href="https://i.imgur.com/mBkW9cs.jpg.ico">
+    <script src="//code-sa1.jivosite.com/widget/R6ePhcsPT1" async></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Sasha Sloan</h1>
+            <ul class="navbar">
+                <a href="home.html">
+                    <li>Community</li>
+                </a>
+                <a href="#">
+                    <li>Music</li>
+                </a>
+                <a href="index.html">
+                    <li>Exit</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <button class="button" onclick="random()">Random</button>
+            <div>
+                <div><img src="https://i.imgur.com/ahfzPnE.jpg" alt=""></div>
+                <button id="0" class="button" onclick="document.getElementById('player').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/n9Re4u9.jpg" alt=""></div>
+                <button id="1" class="button" onclick="document.getElementById('player1').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player1').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/pfJDkfE.png" alt=""></div>
+                <button id="2" class="button" onclick="document.getElementById('player2').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player2').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/FJKbG97.jpg" alt=""></div>
+                <button id="3" class="button" onclick="document.getElementById('player3').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player3').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/UxmViAT.jpg" alt=""></div>
+                <button id="4" class="button" onclick="document.getElementById('player4').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player4').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/oofMZnO.jpg" alt=""></div>
+                <button id="5" class="button" onclick="document.getElementById('player5').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player5').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/RJnOwlN.jpg" alt=""></div>
+                <button id="6" class="button" onclick="document.getElementById('player6').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player6').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/0wf1598.png" alt=""></div>
+                <button id="7" class="button" onclick="document.getElementById('player7').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player7').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/7qyXhYw.jpg" alt=""></div>
+                <button id="8" class="button" onclick="document.getElementById('player8').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player8').pause()">Pause</button>
+            </div>
+            <div>
+                <div><img src="https://i.imgur.com/7454QnT.jpg" alt=""></div>
+                <button id="9" class="button" onclick="document.getElementById('player9').play()">Play</button>
+                <button class="button" onclick="document.getElementById('player9').pause()">Pause</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="player">
+        <source src="assets/WhatsApp Audio 2021-11-20 at 21.54.37.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player1">
+        <source src="assets/WhatsApp Audio 2021-11-20 at 22.02.17.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player2">
+        <source src="assets/WhatsApp Audio 2021-11-20 at 22.06.54.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player3">
+        <source src="assets/WhatsApp Audio 2021-11-20 at 22.07.23.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player4">
+        <source src="assets/WhatsApp Audio 2021-11-27 at 14.19.11.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player5">
+        <source src="assets/WhatsApp Audio 2021-11-28 at 01.17.03.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player6">
+        <source src="assets/WhatsApp Audio 2021-11-28 at 01.17.03 (3).mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player7">
+        <source src="assets/WhatsApp Audio 2021-11-28 at 01.17.03 (2).mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player8">
+        <source src="assets/WhatsApp Audio 2021-11-28 at 01.17.03 (1).mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <audio id="player9">
+        <source src="assets/WhatsApp Audio 2021-11-28 at 02.23.00.mpeg"
+            type="audio/mp3" />
+        seu navegador não suporta HTML5
+    </audio>
+    <div class="footer">
+        <div class="paragrafo">
+            <p>FOLLOW + JOIN NEWSLETTER</p>
+        </div>
+        <div class="container">
+            <div class="box-item">
+                <a href="https://www.facebook.com/sadgirlsloan/" target="_blank">
+                    <img src="https://i.imgur.com/4Xmkax2.png" alt="facebook">
+                </a>
+            </div>
+            <div class="box-item">
+                <a href="https://www.instagram.com/sadgirlsloan/" target="_blank">
+                    <img src="https://i.imgur.com/ZDfWtay.png" alt="instagram">
+                </a>
+            </div>
+            <div class="box-item">
+                <a href="https://www.youtube.com/channel/UCZ2nKwA5u9zhtF9LfCjXJ9g" target="_blank">
+                    <img src="https://i.imgur.com/EPwvc5H.jpg" alt="">
+                </a>
+            </div>
+            <div class="box-item">
+                <a href="https://twitter.com/sadgirlsloan" target="_blank">
+                    <img src="https://i.imgur.com/bjYAeBg.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="paragrafo">
+            <p>© 2021 SONY MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED |
+                <a href="https://www.sonymusic.com/privacy-policy/#your-california-privacy-rights" target="_blank">
+                    PRIVACY POLICY
+                </a>
+                |
+                <a href="https://www.sonymusic.com/terms-and-conditions/" target="_blank">
+                    TERMS AND CONDITIONS
+                </a>|
+                <a href="https://github.com/DuduzinCardoso" target="_blank">
+                    BUILT BY EDUARDO
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var array = [];
+    var consulta = '';
+    function random() {
+        for (var index = 0; index <= 9; index++) {
+            var aleatorio = (Math.random() * 9).toFixed();
+
+            alert(`${aleatorio}`)
+
+            if (0 == aleatorio) {
+                const audio0 = document.querySelector('#player0');
+                audio0.play();
+                array.push(0);
+                consulta = aleatorio;
+            }
+            if (1 == aleatorio) {
+                const audio1 = document.querySelector('#player1');
+                audio1.play();
+                array.push(1);
+                consulta = aleatorio;
+            }
+            if (2 == aleatorio) {
+                const audio2 = document.querySelector('#player2');
+                audio2.play();
+                array.push(2);
+                consulta = aleatorio;
+            }
+            if (3 == aleatorio) {
+                const audio3 = document.querySelector('#player3');
+                audio3.play();
+                array.push(3);
+                consulta = aleatorio;
+            }
+            if (4 == aleatorio) {
+                const audio4 = document.querySelector('#player4');
+                audio4.play();
+                array.push(4);
+                consulta = aleatorio;
+            }
+            if (5 == aleatorio) {
+                const audio5 = document.querySelector('#player5');
+                audio5.play();
+                array.push(5);
+                consulta = aleatorio;
+            }
+            if (6 == aleatorio) {
+                const audio6 = document.querySelector('#player6');
+                audio6.play();
+                array.push(6);
+                consulta = aleatorio;
+            }
+            if (7 == aleatorio) {
+                const audio7 = document.querySelector('#player7');
+                audio7.play();
+                array.push(7);
+                consulta = aleatorio;
+            }
+            if (8 == aleatorio) {
+                const audio8 = document.querySelector('#player8');
+                audio8.play();
+                array.push(8);
+                consulta = aleatorio;
+            }
+            if (9 == aleatorio) {
+                const audio9 = document.querySelector('#player9');
+                audio9.play();
+                array.push(9);
+                consulta = aleatorio;
+            }
+            console.log(`${array}`)
+        }
+
+    }
+</script>

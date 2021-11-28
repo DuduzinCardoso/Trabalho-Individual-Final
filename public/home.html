@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/community.css">
+    <link rel="icon" href="https://i.imgur.com/mBkW9cs.jpg.ico">
+
+    <script src="./js/funcoes.js"></script>
+    <script src="//code-sa1.jivosite.com/widget/R6ePhcsPT1" async></script>
+
+    <title>Sasha Sloan | Community</title>
+</head>
+
+<body onload="metrica()" >
+
+    <div class="header">
+        <div class="container">
+            <h1 class="titulo">Sasha Sloan</h1>
+            <ul class="navbar">
+                <a href="#"><li>Community</li></a>
+                <a href="Music - Home.html"><li>Music</li></a>
+                <a href="index.html"><li>Exit</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h2>
+                For my fans
+            </h2>
+            <p>
+                Hi, <span id="usuario_nome"></span>! I wanted to create a space for us to have a dialogue. If you have anything you want to tell me,
+                a poem you wrote, lyrics to a song etc. you can send me a message here and I’ll read it.
+                I know life can get tricky at times and has been rough so if you’re even
+                just having a bad day and want to vent about it I’m here to listen. This space will continue to evolve as
+                you guys send me more and I can’t wait to read everything! Love you guys.
+            </p> 
+            <br>
+            <p>
+                Sasha Alex Sloan
+            </p>
+            <img onclick="music()" src="https://i.imgur.com/FllkwKy.gif" alt="">
+            <audio id="id_audio1" src="assets/WhatsApp Audio 2021-11-27 at 14.19.11.mpeg"></audio>
+        </div>
+    </div>
+    <div class="form">
+        <div class="container">    
+            <div class="container1">     
+            <b>Name:<div class="div_mensagem" id="div_mensagem1"></div></b> <br> 
+            <b><div class="div_mensagem" id="div_mensagem2"></div>Age:</b> <br>
+            <b>Email:<div class="div_mensagem" id="div_mensagem3"></div> </b> <br><br><br>
+            </div>  
+            <p>Text to Sasha Sloan</p>
+            <textarea id="story" name="" rows="8" cols="32"> </textarea> 
+            <button type="button" class="sign_in" onclick="enviar()">SUBMIT</button>     
+            <b>Total messages from users:</b><div class="div_select" id="div_select"></div>
+        </div>                     
+    </div>
+    <div class="footer">
+        <div class="paragrafo"> 
+            <p>FOLLOW + JOIN NEWSLETTER</p>
+        </div>
+        <div class="container">
+            <div class="box-item">
+                <a href="https://www.facebook.com/sadgirlsloan/" target="_blank"> 
+                    <img src="https://i.imgur.com/4Xmkax2.png" alt="facebook">
+                </a>
+            </div>
+            <div class="box-item">
+                <a href="https://www.instagram.com/sadgirlsloan/" target="_blank"> 
+                    <img src="https://i.imgur.com/ZDfWtay.png" alt="instagram">
+                </a>
+            </div>
+            <div class="box-item">
+                <a href="https://www.youtube.com/channel/UCZ2nKwA5u9zhtF9LfCjXJ9g" target="_blank">
+                     <img src="https://i.imgur.com/EPwvc5H.jpg" alt="">
+                </a> 
+            </div>
+            <div class="box-item">
+                <a href="https://twitter.com/sadgirlsloan" target="_blank">
+                    <img src="https://i.imgur.com/bjYAeBg.png" alt="">
+                </a> 
+            </div>
+        </div>
+        <div class="paragrafo"> 
+        <p>© 2021 SONY MUSIC ENTERTAINMENT. ALL RIGHTS RESERVED | 
+            <a href="https://www.sonymusic.com/privacy-policy/#your-california-privacy-rights" target="_blank">
+                    PRIVACY POLICY 
+            </a>
+            |
+            <a href="https://www.sonymusic.com/terms-and-conditions/" target="_blank">
+                TERMS AND CONDITIONS 
+            </a>|
+            <a href="https://github.com/DuduzinCardoso" target="_blank">
+                BUILT BY EDUARDO
+            </a>
+        </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+function music(){
+    contador = 0;
+    if(contador == 0){
+    alert("cute cat that plays music")
+    const audio1 = document.querySelector('#id_audio1');
+    audio1.play();
+    console.log(`${contador}`)
+    }
+}
+div_mensagem1.innerHTML = sessionStorage.NOME_USUARIO;
+div_mensagem2.innerHTML = sessionStorage.IDADE_USUARIO;
+div_mensagem3.innerHTML = sessionStorage.EMAIL_USUARIO;
+usuario_nome.innerHTML = sessionStorage.NOME_USUARIO;
+
+function enviar(){
+        let idVar = sessionStorage.ID_USUARIO;
+        let storyVar = story.value;
+        alert(`text sent! `)
+        if(!idVar){
+            alert("Seu usuario está inválido" + idVar)
+            window.location = "login.html"
+        }
+
+        if(storyVar == "" || storyVar == 0){
+            alert(`Pontos não pode ser: ${storyVar}`)
+            console.log(`${storyVar}`)
+
+        }
+        
+        fetch("/usuarios/registrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                idServer: idVar,
+                storyServer: storyVar,
+            })
+        }).then((resposta) =>{
+            console.log("estou no then do submeter")
+
+            if(resposta.ok){
+                console.log(resposta);
+                metrica();
+                resposta.json().then(json =>{
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    
+                })
+            }else{
+                alert("Não inserido no banco")
+            }
+        })
+    }
+    function metrica() {
+        
+        fetch("/usuarios/metrica").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    var teste = resposta[0]
+                    div_select.innerHTML = teste.Count + '<br>Last update date: '+ teste.Data;
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+
+        });
+    }
+</script>

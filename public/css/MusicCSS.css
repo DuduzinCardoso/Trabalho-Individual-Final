@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+::-webkit-scrollbar-thumb {
+    background: rgb(209, 206, 206);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: #000000;
+    border-radius: 100%;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: #806294;
+}
+.header{
+    color: #ffffff;
+    overflow: auto;
+    border-bottom: solid 3px #950af1;
+    background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.header h1{
+    color: #950af1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.navbar{
+    float: right;
+    list-style: none;
+}
+.titulo{
+    float: left;
+    margin: 0;
+}
+.navbar li{
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header .navbar li:hover{
+    color: #950af1;
+    cursor: pointer;
+}
+.button{
+    border-radius: 26px;
+    height: 40px;
+    width: 100px;
+    background: #f5abc1;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.button:hover{
+    background:#950af1;
+    color: #fff;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+.main{
+    margin-left: 200px;
+}
+.main .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: auto;
+    padding: 30px;
+    margin: 50px;
+}
+.main .container .button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.footer{
+    background-color: #000000;
+    color: #ffffff;
+    padding: center;
+    height: 200px;
+}
+.footer p{
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+}
+.footer .paragrafo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+.footer .box-item img{
+    height: 50px;
+    width: 50px;
+    padding: 6px;
+}
+.aside a{
+    text-decoration: none;
+}
+.paragrafo a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.paragrafo p{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
