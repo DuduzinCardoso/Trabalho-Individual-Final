@@ -74,11 +74,18 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
+                    var ano = json.idade.split("-")[0]
+                    var mes = json.idade.split("-")[1]
+                    var dia = json.idade.split("-")[2]
+                    var idadeUser = idade(ano,mes,dia)
 
+                    console.log(json.idade)
+                   
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.IDADE_USUARIO = json.idade;
+                    sessionStorage.IDADE_USUARIO = idadeUser;
+                    
 
                     setTimeout(function () {
                         window.location = "./home.html";
@@ -102,5 +109,22 @@
 
         return false;
     }
+    function idade(ano_aniversario, mes_aniversario, dia_aniversario) {
+    var d = new Date,
+        ano_atual = d.getFullYear(),
+        mes_atual = d.getMonth() + 1,
+        dia_atual = d.getDate(),
 
+        ano_aniversario = +ano_aniversario,
+        mes_aniversario = +mes_aniversario,
+        dia_aniversario = +dia_aniversario,
+
+        quantos_anos = ano_atual - ano_aniversario;
+
+    if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
+        quantos_anos--;
+    }
+
+    return quantos_anos < 0 ? 0 : quantos_anos;
+}
 </script>

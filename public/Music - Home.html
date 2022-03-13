@@ -30,7 +30,7 @@
     </div>
     <div class="main">
         <div class="container">
-            <button class="button" onclick="random()">Random</button>
+            
             <div>
                 <div><img src="https://i.imgur.com/ahfzPnE.jpg" alt=""></div>
                 <button id="0" class="button" onclick="document.getElementById('player').play()">Play</button>
@@ -178,78 +178,3 @@
 </body>
 
 </html>
-
-<script>
-    var array = [];
-    var consulta = '';
-    function random() {
-        for (var index = 0; index <= 9; index++) {
-            var aleatorio = (Math.random() * 9).toFixed();
-
-            alert(`${aleatorio}`)
-
-            if (0 == aleatorio) {
-                const audio0 = document.querySelector('#player0');
-                audio0.play();
-                array.push(0);
-                consulta = aleatorio;
-            }
-            if (1 == aleatorio) {
-                const audio1 = document.querySelector('#player1');
-                audio1.play();
-                array.push(1);
-                consulta = aleatorio;
-            }
-            if (2 == aleatorio) {
-                const audio2 = document.querySelector('#player2');
-                audio2.play();
-                array.push(2);
-                consulta = aleatorio;
-            }
-            if (3 == aleatorio) {
-                const audio3 = document.querySelector('#player3');
-                audio3.play();
-                array.push(3);
-                consulta = aleatorio;
-            }
-            if (4 == aleatorio) {
-                const audio4 = document.querySelector('#player4');
-                audio4.play();
-                array.push(4);
-                consulta = aleatorio;
-            }
-            if (5 == aleatorio) {
-                const audio5 = document.querySelector('#player5');
-                audio5.play();
-                array.push(5);
-                consulta = aleatorio;
-            }
-            if (6 == aleatorio) {
-                const audio6 = document.querySelector('#player6');
-                audio6.play();
-                array.push(6);
-                consulta = aleatorio;
-            }
-            if (7 == aleatorio) {
-                const audio7 = document.querySelector('#player7');
-                audio7.play();
-                array.push(7);
-                consulta = aleatorio;
-            }
-            if (8 == aleatorio) {
-                const audio8 = document.querySelector('#player8');
-                audio8.play();
-                array.push(8);
-                consulta = aleatorio;
-            }
-            if (9 == aleatorio) {
-                const audio9 = document.querySelector('#player9');
-                audio9.play();
-                array.push(9);
-                consulta = aleatorio;
-            }
-            console.log(`${array}`)
-        }
-
-    }
-</script>

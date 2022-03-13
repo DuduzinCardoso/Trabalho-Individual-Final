@@ -134,12 +134,12 @@ body{
     height: 50px;
 }
 .aside b{
-    color: #ffffff;
+    color: BLACK;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 20px;
-    background-color: #000000;
+    background-color: #fdd3dfc7;
     padding: 10px;   
 }
 .aside :hover{
